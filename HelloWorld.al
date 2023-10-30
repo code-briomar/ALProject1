@@ -5,11 +5,12 @@
 pageextension 50101 CustomerListExt extends "Customer List"
 {
     var
-    // You start counting at 1` in AL unlike in Other Languages where you start at 0
-        SalesAmount: array[3,5] of Integer;
+        //List - Note that you don't have to determine the no. of elements unlike in Arrays
+        CustomerNames: List of [Text];
     trigger OnOpenPage();
     begin
-        SalesAmount[1,2] := 13;
-        Message('Sales amount 3 is : %1',SalesAmount[1,2]);
+        CustomerNames.Add('Billy');
+        CustomerNames.Add('Juju Smith Schuster');
+        Message(CustomerNames.Get(1));
     end;
 }
