@@ -4,13 +4,26 @@
 
 pageextension 50101 CustomerListExt extends "Customer List"
 {
-    var
-        //List - Note that you don't have to determine the no. of elements unlike in Arrays
-        CustomerNames: List of [Text];
+    procedure AddCustomerNames()
+        var
+            CustomerNames: List of [Text];
+            CustomerNames2: List of [Text];
+            CountriesDictionary: Dictionary of [Code[20], List of [Text]];
+        begin
+            CustomerNames.Add('Paul');
+            CustomerNames.Add('Linda');
+
+             Message(CustomerNames.Get(1)); //Paul
+
+             CustomerNames2.Add('Eddy');
+             CustomerNames2.Add('Mark');
+             CountriesDictionary.Add('US', CustomerNames);
+             CountriesDictionary.Add('CA', CustomerNames2);
+
+             Message(CountriesDictionary.Get('US').Get(2)); //Linda
+        end;
     trigger OnOpenPage();
     begin
-        CustomerNames.Add('Billy');
-        CustomerNames.Add('Juju Smith Schuster');
-        Message(CustomerNames.Get(1));
+        AddCustomerNames();
     end;
 }
