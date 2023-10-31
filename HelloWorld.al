@@ -4,26 +4,10 @@
 
 pageextension 50101 CustomerListExt extends "Customer List"
 {
-    procedure AddCustomerNames()
-        var
-            CustomerNames: List of [Text];
-            CustomerNames2: List of [Text];
-            CountriesDictionary: Dictionary of [Code[20], List of [Text]];
-        begin
-            CustomerNames.Add('Paul');
-            CustomerNames.Add('Linda');
-
-             Message(CustomerNames.Get(1)); //Paul
-
-             CustomerNames2.Add('Eddy');
-             CustomerNames2.Add('Mark');
-             CountriesDictionary.Add('US', CustomerNames);
-             CountriesDictionary.Add('CA', CustomerNames2);
-
-             Message(CountriesDictionary.Get('US').Get(2)); //Linda
-        end;
     trigger OnOpenPage();
+    var
+        MyInt : Integer;
     begin
-        AddCustomerNames();
+        MyInt := 5; // := is read as becomes
     end;
 }
