@@ -8,16 +8,15 @@ pageextension 50101 CustomerListExt extends "Customer List"
     // DIV ( Integer Divide )
     // MOD ( Modulus )
 
-    //String operator concatenates two strings
     trigger OnOpenPage();
     
     var
-        RandomDividend: Integer;
-        RandomDivisor: Integer;
+        RandomIntegerOne: Integer;
+        RandomIntegerTwo: Integer;
     begin
-        RandomDividend := 17;
-        RandomDivisor := 8;
-        Message('%1 / %2 using Integer Divide is %3',RandomDividend,RandomDivisor,RandomDividend DIV RandomDivisor);
-        // -> 2 Decimal Portion is dropped.
+        RandomIntegerOne := 17;
+        RandomIntegerTwo := 8;
+        Message('Modulus of division of %1 by %2 is %3',RandomIntegerOne,RandomIntegerTwo, RandomIntegerOne MOD RandomIntegerTwo);
+        // -> 1 : 17 = (8*2)+1
     end;
 }
