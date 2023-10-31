@@ -1,7 +1,7 @@
 {
   "id": "ba1a3d71-cee5-47dd-9452-b0fd4a9f18d4",
-  "name": "ALProject1",
-  "publisher": "Default publisher",
+  "name": "Data Types",
+  "publisher": "Cronus International Ltd",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
@@ -26,7 +26,5 @@
     "includeSourceInSymbolFile": true
   },
   "runtime": "8.0",
-  "features": [
-    "NoImplicitWith"
-  ]
+  "features": ["NoImplicitWith"]
 }
