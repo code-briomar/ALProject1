@@ -1,19 +1,15 @@
 pageextension 50101 CustomerListExt extends "Customer List"
 {
-    //Unary Operators
+    //String Operator
     // +
-    // -
-    // NOT
 
-    //When - is used, a negative value of the term
-    // that comes after the minus sign. It only impacts
-    // the term that follows the operator.
+    //String operator concatenates two strings
     trigger OnOpenPage();
+    
     var
-        CustomerExsists: Boolean;
-        MyBoolean: Boolean;
+        RandomText: Text[50];
     begin
-        CustomerExsists := true;
-        MyBoolean := NOT CustomerExsists; // False
+        RandomText := 'Wo' + 'rd';
+        // -> Word
     end;
 }
