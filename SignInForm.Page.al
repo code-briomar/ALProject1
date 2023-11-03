@@ -29,7 +29,7 @@ page 50112 "Sign In Form"{
             /// </summary>
             group("User information"){
                 Caption = 'Your Information';
-
+                #region - Hide this info
                 field("First Name";FirstName){
                     ApplicationArea = All;
                     Caption = 'First Name is';
@@ -43,6 +43,8 @@ page 50112 "Sign In Form"{
                     Editable = false;
                     ToolTip = 'Second Name of User';
                 }
+
+                #endregion 
             }
         }
     }
