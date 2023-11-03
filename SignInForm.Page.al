@@ -24,7 +24,9 @@ page 50112 "Sign In Form"{
                 }
             }
 
-            //OUTPUT SECTION
+            /// <summary>
+            ///  Displayes First Name and Second Name
+            /// </summary>
             group("User information"){
                 Caption = 'Your Information';
 
