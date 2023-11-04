@@ -36,7 +36,8 @@ page 50111 "Expressions Card"
 
             group(Output){
                 Caption='Output';
-
+                
+                
                 field(Result;Result){
                     ApplicationArea = All;
                     Caption='Result';
@@ -59,6 +60,8 @@ page 50111 "Expressions Card"
                 ToolTip='Click to calculate the result';
                 trigger OnAction()
                 begin
+                    if Value1 > Value2 then
+                        Message('Value1 is greater than value 2');
                     Result := Value1 > Value2;
                 end;
             }
